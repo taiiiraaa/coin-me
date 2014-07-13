@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Coin me</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <!--[if lt IE 7]>
+                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <![endif]-->
+            <header>
+                <h1>Coin me</h1>
+            </header>
+
+            <p>Enter an amount in pound sterling and this tool will display the minimum number of sterling coins needed to make that amount.</p>
+            <p>Input amount of 10 will equate to 10p rather than &pound;10. For &pound;10 enter 10.00, &pound;10 or 1000.</p>
+            <form id="form-coin" method="post" action="">
+                <input type="text" name="amount" value="" id="amount" class="input-amount" placeholder="Amount">
+                <input type="submit" name="submit" value="Submit" class="button-submit">
+                <div class="error" id="form-error">Please enter a valid amount</div>
+            </form>
+
+            <div class="result-container" id="result-container">
+                <h4>Given amount can be made using the coin(s):</h4>
+                <div id="result"></div>
+            </div>
+            <span data-template="<div>__coin__ x __count__</div>" id="result-row"></span>
+
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
