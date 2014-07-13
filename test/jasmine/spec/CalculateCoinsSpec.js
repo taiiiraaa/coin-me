@@ -34,4 +34,37 @@ describe("Converts pound sterling amount to pence.", function(){
     }    
 });
 
+describe("Converts pence value to coin denominations", function(){
+       var testData = [
+        [4, [2,2]], 
+        [85, [50, 20, 10, 5]],
+        [197, [100, 50, 20, 20, 5, 2]], 
+        [2, [2]], 
+        [424, [200, 200, 20, 2, 2]], 
+        [187, [100, 50, 20, 10, 5, 2]], 
+        [123, [100, 20, 2, 1]],
+        [200, [200]],
+        [1000, [200, 200, 200, 200, 200]],
+        [187, [100, 50, 20, 10, 5, 2]], 
+        [100, [100]],
+        [141, [100, 20, 20, 1]], 
+        [126, [100, 20, 5, 1]],
+        [0, 0]
+       ];
+    var testDataLength = testData.length;
+    
+    function callTest(input, output)
+    {
+        it("Given input " + input + "p, coin denominations required will be " + output, function(){
+            expect(coin.penceToCoins(input)).toEqual(output);
+        }); 
+    }
+    
+    for(var i = 0; i < testDataLength; i++)
+    {
+        callTest(testData[i][0], testData[i][1]);
+    }    
 
+
+
+});

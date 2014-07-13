@@ -15,7 +15,6 @@ var coin = (function() {
             }
             
             var regexResult = inputPattern.exec(inputValue);
-            //console.log(inputPattern.exec(inputValue));
 
             // ignore empty string, non-numeric and missing digit
             if(!regexResult || regexResult[4])
@@ -29,7 +28,6 @@ var coin = (function() {
             var valueNoSigns = regexResult[2];
             var numberBeforeDot = regexResult[3];
                     
-            //console.log(hasPoundSign, hasPenceSign, isDecimalFraction, valueNoSigns, numberBeforeDot);              
             
             if(isDecimalFraction)
             {
@@ -163,8 +161,6 @@ var coin = (function() {
             document.getElementById('result-container').style.display = 'block';
             document.getElementById('result').innerHTML = resultHTML;
             return true;
-            
         },
-        
     };
 }());
